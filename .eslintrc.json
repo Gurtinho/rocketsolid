@@ -17,8 +17,15 @@
   },
   "plugins": ["@typescript-eslint", "eslint-plugin-import-helpers", "prettier"],
   "rules": {
+    "indent": [4, "tab"],
+    "no-tabs": 0,
     "camelcase": "off",
-    "prettier/prettier": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "crlf"
+      }
+    ],
     "import/no-unresolved": "error",
     "@typescript-eslint/naming-convention": [
       "error",
