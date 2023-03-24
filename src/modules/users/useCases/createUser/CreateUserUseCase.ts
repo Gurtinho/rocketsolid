@@ -1,8 +1,8 @@
-import { IUsersRepository } from "../../repositories/IUsersRepository"
+import { IUsersRepository } from "../../repositories/IUsersRepository";
 
 interface IRequest {
-  name: string
-  email: string
+  name: string;
+  email: string;
 }
 
 class CreateUserUseCase {
@@ -20,4 +20,4 @@ class CreateUserUseCase {
   }
 }
 
-export { CreateUserUseCase }
+export { CreateUserUseCase };

@@ -18,7 +18,7 @@ class UsersRepository implements IUsersRepository {
     return UsersRepository.INSTANCE;
   }
 
-  create({ name, email }: ICreateUserDTO): void {
+  create({ name, email }: ICreateUserDTO): User {
     const user = new User;
     Object.assign(user, {
       name,
@@ -28,6 +28,7 @@ class UsersRepository implements IUsersRepository {
       updated_at: new Date()
     })
     this.users.push(user);
+    return user;
   }
 
   findById(id: string): User | undefined {
